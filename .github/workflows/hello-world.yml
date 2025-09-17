@@ -1,0 +1,17 @@
+name : hello Input Example
+on:
+  workflow_dispatch:
+    inputs:
+      your_name:
+        description: "Enter you name"
+        required : true
+        default : "student"
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greetings
+        run: |
+          echo "hello, $ {{github.event.inputs.you_name}}"
+        
+          
