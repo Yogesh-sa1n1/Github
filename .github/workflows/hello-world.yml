@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Print greetings
         run: |
-          echo "hello, $ {{github.event.inputs.you_name}}"
+          echo "hello, ${{github.event.inputs.your_name}}"
         
           
